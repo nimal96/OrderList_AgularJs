@@ -1,3 +1,3 @@
 # OrderList-using-angularJs
-# OrderList-using-angularJs
-# orderList_usingAgularJs
+
+This is a simple web application using the AngularJs.
