@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myNinjaApp">
+  <head>
+    <title>Live web Page</title>
+    <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
+    <script src ="app\lib\angular.min.js"></script>
+    <script src="app\app.js"></script>
+  </head>
+  <header ng-include="'header.html'"></header>
+  <body ng-init="ninjas=['yoshi','crystal','ryu','shaun']">
+    <input type="text" ng-model="favMeat" placeholder="Enter your favourite meal :"/>
+    <p>My favourite meal is {{favMeat}}</p>
+    <p>{{numbers[0]}}</p>
+    <p>{{numbers[1]}}</p>
+    <p>{{numbers[2]}}</p>
+    <p>{{numbers[3]}}</p>
+    <p>{{numbers[3]+numbers[1]}}</p>
+  <p class="{{color}}">hello dudes</p>
+  <ul>
+    <li>{{ninjas[0]}}</li>
+    <li>{{ninjas[1]}}</li>
+    <li>{{ninjas[2]}}</li>
+    <li>{{ninjas[3]}}</li>
+    <li ng-repeat="i in ninjas">{{i}}</li>
+  </ul>
+  <p>family members</p>
+  <p>{{message}}</p>
+
+  <div ng-controller="NinjaController">
+      <ul>
+        <li ng-repeat="ninja1 in ninjas">{{ninja1}}</li>
+      </ul>
+  </div>
+  </body>
+</html>
