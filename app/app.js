@@ -1,19 +1,68 @@
 var myNinjaApp =angular.module('myNinjaApp',[]);
 
-myNinjaApp.config(function(){
 
 
+myNinjaApp.controller('NinjaController',['$scope',function($scope){
 
-});
+  $scope.removeNinja = function(ninja){
+    var removedNinja = $scope.ninjas.indexOf(ninja);
+    $scope.ninjas.splice(removedNinja,1);
 
-myNinjaApp.run(function(){
 
+  };
+  $scope.addNinja= function(){
+      $scope.ninjas.push({
+        name:$scope.newninja.name,
+        belt:$scope.newninja.belt,
+        rate:parseInt($scope.newninja.rate),
+        available :false
+      });
+  };
 
-});
+  $scope.ninjas=[
+    {
+      name :"YOSHI",
+      belt:"green",
+      rate :50,
+      available:false
 
-myNinjaApp.controller('NinjaController',function($scope){
+    },
+    {
+      name :"Pasan",
+      belt:"red",
+      rate :50,
+      available:true
 
-  $scope.message="Hey y'all";
-  $scope.ninjas =['pasan','shameen','kasun','supun'];
+    },
+    {
+      name :"Naveen",
+      belt:"yellow",
+      rate :50,
+      available:true
 
-});
+    },
+    {
+      name :"A.u",
+      belt:"green",
+      rate :50,
+      available:true
+
+    },
+    {
+      name :"Naveen",
+      belt:"green",
+      rate :50,
+      available:true
+
+    },
+    {
+      name :"Charith",
+      belt:"pink",
+      rate :50,
+      available:true
+
+    }
+
+  ];
+
+}]);
