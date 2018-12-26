@@ -10,13 +10,21 @@ myNinjaApp.controller('NinjaController',['$scope',function($scope){
 
 
   };
-  $scope.addNinja= function(){
+  $scope.addNinja = function(newninja){
+
+
       $scope.ninjas.push({
-        name:$scope.newninja.name,
-        belt:$scope.newninja.belt,
-        rate:parseInt($scope.newninja.rate),
-        available :false
+        name: $scope.newninja.name,
+        belt: $scope.newninja.belt,
+        rate: parseInt($scope.newninja.rate),
+        available:true
       });
+
+      $scope.newninja.name = " ";
+      $scope.newninja.belt = " ";
+      $scope.newninja.rate = " ";
+
+      $window.alert('Hi!! ');
   };
 
   $scope.ninjas=[
